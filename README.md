@@ -1,6 +1,6 @@
 # tmpkoppu
 
-A package that allows to create and store data in a temporary file. The stored data will be returned in same type as stored while retrieving from the file. Also, a dedicated API available to remove the file manually.
+A package that allows to create and store data in a temporary file. The stored data will be returned in same type as stored while retrieving from the file. Also, a dedicated method available to remove the file manually.
 
 `tmpkoppu` - name inspired from a combination of english-tamil words, where `tmp` from temporary and `koppu`(கோப்பு) which means file in tamil. As the name refers, it's a temporary-file.
 
@@ -27,7 +27,7 @@ This method used to create a temporary file under the server's `/tmp` directory.
 ```
 store(data: any)
 ```
-It will return a promise resolved with `path` of the file. It can be used to perform further operations like retrieving data and removing file manually.
+It will return a promise resolved with `path` of the generated file. The path will be used to perform further operations like retrieving data and removing file manually.
 
 ###### Example
 ```
