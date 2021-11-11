@@ -6,6 +6,13 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
+  "repository": {
+    "type": "git",
+    "url": "git@github.com:guganabu/tmpkoppu.git"
+  },
+  "bugs": {
+    "url": "https://github.com/guganabu/tmpkoppu/issues"
+  },
   "keywords": [
     "node",
     "fs",
@@ -15,5 +22,6 @@
   "license": "MIT",
   "dependencies": {
     "uuid": "^8.3.2"
-  }
+  },
+  "homepage": "https://github.com/guganabu/tmpkoppu"
 }
