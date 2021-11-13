@@ -87,9 +87,11 @@ const store = (inputData) => {
  */
 const get =  (path) => {
     return new Promise((resolve, reject) => {
+        if (!path)
+            reject(new Error('File path is required'))
         fs.readFile(path, {encoding: 'utf-8'}, (err, data) => {
             if (err) 
-                reject(err);
+                reject(new Error('File is not available, please check file path'));
             resolve(resolveToType(data, extractTypeFromFile(path)))
         });
     });
@@ -104,9 +106,11 @@ const get =  (path) => {
  */
 const remove = (path) => {
     return new Promise((resolve, reject) => {
+        if (!path)
+            reject(new Error('File path is required'))
         fs.rm(path, (err) =>{
             if (err)
-                reject(err)
+                reject(new Error('File path is invalid'))
             resolve("File removed!");
         })
     })
